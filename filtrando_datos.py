@@ -1,8 +1,8 @@
 DATA = [
     {
-        'name': 'Facundo',
+        'name': 'ernesto',
         'age': 72,
-        'organization': 'Platzi',
+        'organization': 'valley',
         'position': 'Technical Coach',
         'language': 'python',
     },
@@ -16,21 +16,21 @@ DATA = [
     {
         'name': 'Héctor',
         'age': 19,
-        'organization': 'Platzi',
+        'organization': 'silicon',
         'position': 'Associate',
         'language': 'ruby',
     },
     {
         'name': 'Gabriel',
         'age': 20,
-        'organization': 'Platzi',
+        'organization': 'caffe',
         'position': 'Associate',
         'language': 'javascript',
     },
     {
         'name': 'Isabella',
         'age': 30,
-        'organization': 'Platzi',
+        'organization': 'silicon',
         'position': 'QA Manager',
         'language': 'java',
     },
@@ -72,13 +72,11 @@ DATA = [
 ]
 
 def run():
-  pass
+    all_python_devs = [worker['name'] for worker in DATA if worker['language'] == 'python']
 
 
-
-
-
-
+    for worker in all_python_devs:
+        print(worker)
 
 
 if __name__ == '__main__':
