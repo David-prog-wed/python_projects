@@ -2,7 +2,7 @@ DATA = [
     {
         'name': 'ernesto',
         'age': 72,
-        'organization': 'valley',
+        'organization': 'silicon',
         'position': 'Technical Coach',
         'language': 'python',
     },
@@ -23,7 +23,7 @@ DATA = [
     {
         'name': 'Gabriel',
         'age': 20,
-        'organization': 'caffe',
+        'organization': 'silicon',
         'position': 'Associate',
         'language': 'javascript',
     },
@@ -73,9 +73,9 @@ DATA = [
 
 def run():
     all_python_devs = [worker['name'] for worker in DATA if worker['language'] == 'python']
+    all_silicon_workers = [worker['name'] for worker in DATA if worker['organization'] == 'silicon']
 
-
-    for worker in all_python_devs:
+    for worker in all_silicon_workers:
         print(worker)
 
 
