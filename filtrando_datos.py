@@ -71,14 +71,43 @@ DATA = [
     },
 ]
 
+#High order funcions  filter, map and reduce  / merge list + con diccionarios |
+
 def run():
     all_python_devs = [worker['name'] for worker in DATA if worker['language'] == 'python']
+ master
+#    all_silicon_workers = [worker['name'] for worker in DATA if worker['organization'] == 'silicon']
+    adults = list(filter(lambda worker: worker['age'] > 18, DATA))
+    adults = list(map(lambda worker: worker['name'], adults))
+    old_people = list(map(lambda worker: worker | {'old': worker['age'] > 70}, DATA))
+    all_silicon_workers = list(filter(lambda worker: worker['organization'] == 'silicon', DATA))
+    all_silicon_workers = list(map(lambda worker: worker['name'], all_silicon_workers))
+
+
+    for worker in all_silicon_workers:
+
     all_silicon_workers = [worker['name'] for worker in DATA if worker['organization'] == 'silicon']
     adults = list(filter(lambda worker: worker['18'] > 18, DATA))
 
-    for worker in adults:
+    
+    for worker in all_silicon_workers:
         print(worker)
 
 
 if __name__ == '__main__':
-  run()
+    run()
+  
+
+
+  # Nuevo Reto
+
+  #Con list comprehensions
+# adults = [worker ['name'] for worker in DATA if worker ['age'] > 18]
+# old_people = [{**worker, **{'old': worker['age'] > 70}} for worker in DATA]
+
+# #Con high order functions
+# all_python_devs = list(filter(lambda worker: worker['language'] == 'python', DATA))
+# all_python_devs = list(map(lambda worker: worker['name'], all_python_devs))
+
+# all_silicon_workers = list(filter(lambda worker: worker['organization'] == 'silicon', DATA))
+# all_silicon_workers = list(map(lambda worker: worker['name'], all_silicon_workers))
