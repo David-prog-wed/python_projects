@@ -74,7 +74,7 @@ DATA = [
 def run():
     all_python_devs = [worker['name'] for worker in DATA if worker['language'] == 'python']
     all_silicon_workers = [worker['name'] for worker in DATA if worker['organization'] == 'silicon']
-    adults = list(filter(lambda worker: worker['18'] > 18, DATA))
+    adults = list(filter(lambda worker: worker['age'] > 18, DATA))
 
     for worker in adults:
         print(worker)
