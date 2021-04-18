@@ -75,7 +75,6 @@ DATA = [
 
 def run():
     all_python_devs = [worker['name'] for worker in DATA if worker['language'] == 'python']
- master
 #    all_silicon_workers = [worker['name'] for worker in DATA if worker['organization'] == 'silicon']
     adults = list(filter(lambda worker: worker['age'] > 18, DATA))
     adults = list(map(lambda worker: worker['name'], adults))
@@ -83,11 +82,8 @@ def run():
     all_silicon_workers = list(filter(lambda worker: worker['organization'] == 'silicon', DATA))
     all_silicon_workers = list(map(lambda worker: worker['name'], all_silicon_workers))
 
-
-    for worker in all_silicon_workers:
-
-    all_silicon_workers = [worker['name'] for worker in DATA if worker['organization'] == 'silicon']
-    adults = list(filter(lambda worker: worker['18'] > 18, DATA))
+    #all_silicon_workers = list(filter(lambda worker: worker['organization'] == 'silicon', DATA))
+    #all_silicon_workers = list(map(lambda worker: worker['name'], all_silicon_workers))
 
     
     for worker in all_silicon_workers:
