@@ -3,8 +3,8 @@ def divisors(num):
     for i in range(1, num + 1):
         if num % i == 0:
             divisors.append(i)
+        if num % i == 1:
     return divisors
-
 
 def run():
     try:
@@ -13,7 +13,7 @@ def run():
         print('Termino mi programa')
     except ValueError:
         print('Debes ingresar un número')
-
-
+      
+      
 if __name__ == '__main__':
     run()
