@@ -7,11 +7,15 @@ def read():
 
 
 def write():
-    pass
+    names = ['David', 'Miguel', 'Pepe', 'Cristian', 'Rocío']
+    with open('./archivos/names.txt', 'w') as f:
+        for name in names:
+            f.write(name)
+            f.write('\n')
 
 
 def run():
-    read()
+  write()
 
     
 if __name__ == '__main__':
