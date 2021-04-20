@@ -13,7 +13,7 @@ def write():
 def run():
     read()
 
-
+    
 if __name__ == '__main__':
     run()
 
